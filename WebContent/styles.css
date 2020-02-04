@@ -1,0 +1,48 @@
+h1 {
+    color: #0003ff;
+    text-shadow: 1px 1px black;
+    text-align: center;
+    font-size: 3em;
+}
+
+.inputs{
+    text-align: center;
+}
+a {
+    text-align: center;
+    text-decoration: none;
+}
+
+button {
+    padding-top: 0.1em;
+    padding-bottom: 0.1em;
+    font-size: 1em;
+    margin-top: 0.75em;
+    width: 15%;
+}
+input{
+    font-size: 1em;
+    width: 17.5%;
+}
+.delete-warning{
+    color: red;
+    font-size: 1.5em;
+}
+.delete-button{
+
+    padding-top: 0.1em;
+    padding-bottom: 0.1em;
+    font-size: 1em;
+    color: white;
+    margin-top: 0.75em;
+    background-color: red;
+    width: 15%;
+}
+.menu-button{
+    padding-top: 0.1em;
+    padding-bottom: 0.1em;
+    font-size: 1em;
+    margin-top: 0.75em;
+    width: 15%;
+
+}
