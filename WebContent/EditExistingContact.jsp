@@ -1,3 +1,5 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -6,6 +8,10 @@
 		<title>Edit contact</title>
 	</head>
 	<body>
+	<c:if test="${empty currentUser}">
+		<c:redirect url="/index.jsp" />
+	</c:if>
+	
 		<div>
 			<h1>Edit contact</h1>
 		</div>

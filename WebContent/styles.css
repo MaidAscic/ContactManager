@@ -48,3 +48,17 @@ input{
     width: 15%;
 
 }
+table{
+	width:100%
+	
+}
+th{
+    background-color: #0003ff;
+    color: white;
+    padding: 1em;
+}
+
+tr {
+    padding: 1em;
+    border-bottom: 1px;
+}

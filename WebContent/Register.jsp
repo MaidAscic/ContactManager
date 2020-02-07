@@ -7,6 +7,9 @@
 <title>Register</title>
 </head>
 <body>
+<c:if test="${not empty currentUser}">
+		<c:redirect url="/MainMenuUI.jsp" />
+	</c:if>
 	<div>
 		<h1>Register</h1>
 	</div>

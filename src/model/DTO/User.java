@@ -8,7 +8,8 @@ public class User {
 	private String name;
 	private String surname;
 	private String password;
-
+	private ArrayList<Contact> contacts = new ArrayList<>();
+	
 	public ArrayList<Contact> getContacts() {
 		return contacts;
 	}
@@ -17,7 +18,7 @@ public class User {
 		this.contacts = contacts;
 	}
 
-	private ArrayList<Contact> contacts = new ArrayList<>();
+	
 	public User() {
 		
 	}

@@ -7,6 +7,9 @@
 <title>Contact manager</title>
 </head>
 <body>
+	<c:if test="${empty currentUser}">
+		<c:redirect url="/index.jsp" />
+	</c:if>
 	<div>
 		<h1>
 			Welcome
@@ -24,7 +27,7 @@
 				<input class="menu-button" type="button" value="Delete existing Contact">
 			</a><br>
 		<form method="post" action="ListAllContacts.do">
-			<input class="menu-button" type="submit" value="List all Contacts"><br>
+				<input class="menu-button" type="submit" value="List all Contacts"><br>
 		</form>
 		<form method="post" action="Logout.do">
 			<input class="menu-button" type="submit"value="Logout"><br>
