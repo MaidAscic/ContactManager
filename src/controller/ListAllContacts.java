@@ -28,7 +28,7 @@ public class ListAllContacts extends HttpServlet {
 			rd = req.getRequestDispatcher("ListAllContacts.jsp");
 			rd.forward(req, resp);
 		} catch (SQLException e) {
-			rd = req.getRequestDispatcher("sqlerror.html");
+			rd = req.getRequestDispatcher("sqlerror.jsp");
 			rd.forward(req, resp);
 		}
 	}

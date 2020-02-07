@@ -10,24 +10,26 @@
 	<div>
 		<h1>
 			Welcome
-			<c:out value="${sessionScope.currentUser.name }"></c:out>
+			<c:out value="${currentUser.name }"></c:out>
 		</h1>
 	</div>
 	<div class="inputs">
-		<form>
-			<a href="AddNewContact.html"><input class="menu-button"
-				type="button" value="Add new Contact"></a><br> <a
-				href="EditExistingContact.html"><input class="menu-button"
-				type="button" value="Edit existing Contact"></a><br> <a
-				href="DeleteExistingContact.html"><input class="menu-button"
-				type="button" value="Delete existing Contact"></a><br>
-		</form>
+			<a href="AddNewContact.jsp"> 
+				<input class="menu-button" type="button" value="Add new Contact">
+			</a><br> 
+			<a href="EditExistingContact.jsp"> 
+				<input class="menu-button" type="button" value="Edit existing Contact">
+			</a><br> 
+			<a href="DeleteExistingContact.jsp"> 
+				<input class="menu-button" type="button" value="Delete existing Contact">
+			</a><br>
 		<form method="post" action="ListAllContacts.do">
-			<input class="menu-button" type="button" value="List all Contacts"><br>
+			<input class="menu-button" type="submit" value="List all Contacts"><br>
 		</form>
-
-		<a href="LogOut.html"><input class="menu-button" type="button"
-			value="Logout"></a><br> <a href="DeleteUser.html"><input
+		<form method="post" action="Logout.do">
+			<input class="menu-button" type="submit"value="Logout"><br>
+		</form> 
+			<a href="DeleteUser.jsp"><input
 			class="delete-button" type="button" value="Delete current user"></a><br>
 
 	</div>

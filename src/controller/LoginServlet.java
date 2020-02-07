@@ -30,7 +30,7 @@ public class LoginServlet extends HttpServlet {
 		currentUser = LoginProcess.findUser(name, surname);
 
 		if (currentUser == null) {
-		    request.setAttribute("error", "Name, Surname or password incorrect");
+		    request.setAttribute("loginError", "Name and/or Surname incorrect");
 		    rd = request.getRequestDispatcher("Login.jsp");
 		    rd.forward(request, response);
 		    
@@ -38,14 +38,19 @@ public class LoginServlet extends HttpServlet {
 		    hs.setAttribute("currentUser", currentUser);
 		    rd = request.getRequestDispatcher("MainMenuUI.jsp");
 		    rd.forward(request, response);
+		} else {
+		    request.setAttribute("loginError", "Password incorrect");
+		    rd = request.getRequestDispatcher("Login.jsp");
+		    rd.forward(request, response);
 		}
+		
 
-	    } catch (SQLException e) {
-		rd = request.getRequestDispatcher("sqlerror.html");
+	    } catch (SQLException e) { 
+		rd = request.getRequestDispatcher("sqlerror.jsp");
 		rd.forward(request, response);
 	    }
 	} else {
-	    request.setAttribute("error", "Name, Surname or password incorrect");
+	    request.setAttribute("loginError", "Input fields cannot be empty");
 	    rd = request.getRequestDispatcher("Login.jsp");
 	    rd.forward(request, response);
 	}

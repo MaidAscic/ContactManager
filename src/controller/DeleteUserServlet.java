@@ -26,11 +26,11 @@ public class DeleteUserServlet extends HttpServlet {
 
 			udi.deleteUser(cu.getId());
 			hs.setAttribute("currentUser", null);
-			rd = req.getRequestDispatcher("index.html");
+			rd = req.getRequestDispatcher("index.jsp");
 			rd.forward(req, resp);
 		} catch (SQLException e) {
 			e.printStackTrace();
-			rd = req.getRequestDispatcher("sqlerror.html");
+			rd = req.getRequestDispatcher("sqlerror.jsp");
 			rd.forward(req, resp);
 		}
 	}
