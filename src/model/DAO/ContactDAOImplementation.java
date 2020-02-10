@@ -21,34 +21,33 @@ public class ContactDAOImplementation implements ContactDAO {
 	 * @throws SQLException
 	 */
 	@Override
-	public Contact getContact(int userId, String phoneNumber) throws SQLException {
-		Contact contact = null;
-
-		String query = "SELECT * FROM contacts WHERE phonenumber = ? AND id = ?";
+	public ArrayList<Contact> getContact(int userId, String name, String surname, String phoneNumber) throws SQLException {
+	    ArrayList<Contact> contactsList = new ArrayList<>();
+	    name = "%"+ name + "%";
+	    surname = "%"+ surname + "%";
+	    phoneNumber = "%" + phoneNumber + "%";
+		String query = "SELECT * FROM contacts WHERE id = ? AND (name LIKE ? OR surname LIKE ? OR phonenumber LIKE ?)";
 
 		ResultSet rs;
 
 		try (PreparedStatement statement = connection.prepareStatement(query)) {
 
-			statement.setString(1, phoneNumber);
-			statement.setInt(2, userId);
-
+			statement.setInt(1, userId);
+			statement.setString(2, name);
+			statement.setString(3, surname);
+			statement.setString(4, phoneNumber);
 			rs = statement.executeQuery();
 
-			if (rs.next()) {
-
-				contact = new Contact(
-						rs.getInt("id"),
-						rs.getString("name"),
-						rs.getString("surname"),
-						rs.getString("phonenumber"))
-				;
-
-				rs.close();
+			while (rs.next()) {
+				contactsList.add(new Contact(rs.getInt("id"), rs.getString("name"),
+						rs.getString("surname"), rs.getString("phonenumber")));
 			}
+
+
 		}
 
-		return contact;
+		return contactsList;
+
 
 	}
 

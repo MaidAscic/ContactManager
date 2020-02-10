@@ -3,39 +3,9 @@ package model.BO;
 import java.sql.SQLException;
 
 import model.DAO.UserDAOImplementation;
-import model.UI.InitialMenu;
-import model.main.Main;
 
 public class RegistrationProcess {
 	static UserDAOImplementation accessUsers = new UserDAOImplementation();
-
-	/**
-	 * Asks user to input data, calls a method to check the data.
-	 * If the data is valid calls a method to create a new User
-	 *
-	 * @throws SQLException
-	 */
-	public static void registerProcess() throws SQLException {
-
-		System.out.println("Enter your name: ");
-		String name = Main.input.next();
-
-		System.out.println("Enter your surname: ");
-		String surname = Main.input.next();
-
-		if (doesUserExists(name, surname)) {
-			System.out.println("That user already exists!");
-			InitialMenu.initialMenu();
-		}
-
-		System.out.println("Enter your password: ");
-		String password = Main.input.next();
-
-		createUser(name, surname, password);
-		System.out.println("The user has been successfully created!");
-
-		InitialMenu.initialMenu();
-	}
 
 	/**
 	 * Checks if the user with passed data already exists

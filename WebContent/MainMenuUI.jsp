@@ -26,6 +26,7 @@
 			<a href="DeleteExistingContact.jsp"> 
 				<input class="menu-button" type="button" value="Delete existing Contact">
 			</a><br>
+			<a href="Search.jsp"><input class="menu-button" type="button" value ="Search"></a>
 		<form method="post" action="ListAllContacts.do">
 				<input class="menu-button" type="submit" value="List all Contacts"><br>
 		</form>

@@ -22,6 +22,17 @@
 		<url-pattern>/NewContact.do</url-pattern>
 	</servlet-mapping>
 
+<servlet>
+		<servlet-name>Search.do</servlet-name>
+		<servlet-class>controller.SearchServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Search.do</servlet-name>
+		<url-pattern>/Search.do</url-pattern>
+	</servlet-mapping>
+
 	<servlet>
 		<servlet-name>Login.do</servlet-name>
 		<servlet-class>controller.LoginServlet</servlet-class>
@@ -95,7 +106,7 @@
 		<servlet-name>Logout.do</servlet-name>
 		<url-pattern>/Logout.do</url-pattern>
 	</servlet-mapping>
-	<error-page>
-		<location>/WEB-INF/sqlerror.jsp</location>
-	</error-page>
+<!-- 	<error-page> -->
+<!-- 		<location>/WEB-INF/sqlerror.jsp</location> -->
+<!-- 	</error-page> -->
 </web-app>
