@@ -30,7 +30,7 @@ public class DeleteUserServlet extends HttpServlet {
 			rd.forward(req, resp);
 		} catch (SQLException e) {
 			e.printStackTrace();
-			rd = req.getRequestDispatcher("sqlerror.jsp");
+			rd = req.getRequestDispatcher("WEB-INF/sqlerror.jsp");
 			rd.forward(req, resp);
 		}
 	}

@@ -106,7 +106,7 @@
 		<servlet-name>Logout.do</servlet-name>
 		<url-pattern>/Logout.do</url-pattern>
 	</servlet-mapping>
-<!-- 	<error-page> -->
-<!-- 		<location>/WEB-INF/sqlerror.jsp</location> -->
-<!-- 	</error-page> -->
+	<error-page>
+		<location>/WEB-INF/sqlerror.jsp</location>
+	</error-page>
 </web-app>

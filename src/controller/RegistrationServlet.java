@@ -39,7 +39,7 @@ public class RegistrationServlet extends HttpServlet {
 		    rd.forward(request, response);
 	    }
 	} catch (SQLException e) {
-	    rd = request.getRequestDispatcher("sqlerror.jsp");
+	    rd = request.getRequestDispatcher("WEB-INF/sqlerror.jsp");
 	    rd.forward(request, response);
 	}
 

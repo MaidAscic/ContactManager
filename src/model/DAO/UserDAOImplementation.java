@@ -45,9 +45,7 @@ public class UserDAOImplementation implements UserDAO {
 				rs.close();
 			}
 		}
-
 		return user;
-
 	}
 
 	/**

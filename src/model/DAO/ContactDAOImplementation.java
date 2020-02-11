@@ -45,7 +45,6 @@ public class ContactDAOImplementation implements ContactDAO {
 
 
 		}
-
 		return contactsList;
 
 
@@ -102,7 +101,6 @@ public class ContactDAOImplementation implements ContactDAO {
 			statement.executeUpdate();
 
 		}
-
 	}
 
 	/**
@@ -125,7 +123,6 @@ public class ContactDAOImplementation implements ContactDAO {
 			statement.executeUpdate();
 
 		}
-
 	}
 
 
@@ -155,7 +152,6 @@ public class ContactDAOImplementation implements ContactDAO {
 
 
 		}
-
 		return contactsList;
 
 	}

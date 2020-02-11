@@ -33,7 +33,7 @@ public class ListAllContacts extends HttpServlet {
 	    rd = req.getRequestDispatcher("ListAllContacts.jsp");
 	    rd.forward(req, resp);
 	} catch (SQLException e) {
-	    rd = req.getRequestDispatcher("sqlerror.jsp");
+	    rd = req.getRequestDispatcher("WEB-INF/sqlerror.jsp");
 	    rd.forward(req, resp);
 	}
 

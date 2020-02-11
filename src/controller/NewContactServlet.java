@@ -36,7 +36,7 @@ public class NewContactServlet extends HttpServlet {
 			rd = request.getRequestDispatcher("MainMenuUI.jsp");
 			rd.forward(request, response);
 		} catch (SQLException e) {
-			rd = request.getRequestDispatcher("sqlerror.jsp");
+			rd = request.getRequestDispatcher("WEB-INF/sqlerror.jsp");
 			rd.forward(request, response);
 		}
 	}
